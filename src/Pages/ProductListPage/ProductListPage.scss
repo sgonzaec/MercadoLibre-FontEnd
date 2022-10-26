@@ -1,0 +1,39 @@
+.product-list-page {
+  width: 80%;
+  margin: auto;
+  margin-top: 3em;
+  .card {
+    margin: 0 1em;
+    padding: 1em;
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-bottom: 1px solid var(--tertiary);
+    justify-content: space-between;
+    img {
+      width: 180px;
+      height: 180px;
+    }
+    &__location {
+      margin-right: 2em;
+      p {
+        font-size: 13px;
+      }
+    }
+    &__info {
+      left: 14em;
+      max-width: 50%;
+      position: absolute;
+      &__price {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+          width: 25px;
+          height: 25px;
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}
