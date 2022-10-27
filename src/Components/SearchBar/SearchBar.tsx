@@ -1,10 +1,18 @@
 import "./SearchBar.scss";
 import iconSearch from "../../Assets/images/ic_Search@2x.png";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
   const [searchData, setSearchData] = useState("");
+
+  const navigate = useNavigate();
+
+  const validKey = (e: any) => {
+    if(e.keyCode === 13){
+      navigate(`/${searchData}`);
+    }
+  }
 
   return (
     <div className="search-bar">
@@ -16,6 +24,7 @@ const SearchBar = () => {
         onKeyUp={(e) => {
           const target = e.target as HTMLTextAreaElement;
           setSearchData(target.value)
+          validKey(e);
         }}
       />
       <Link to={`/${searchData}`}>
