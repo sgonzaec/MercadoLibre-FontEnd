@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.scss";
 
 //Pages
-import ProductListPage from "./Pages/ProductListPage/ProductListPage";
 import SearchPage from "./Pages/SearchPage/SearchPage";
+import ProductListPage from "./Pages/ProductListPage/ProductListPage";
+import ProductDetailPage from "./Pages/ProductDetailPage/ProductDetailPage";
 
 function App() {
 
@@ -18,6 +19,10 @@ function App() {
           <Route
             path={`/:searchName`}
             element={<ProductListPage />}
+          />
+          <Route
+            path={`items/:id`}
+            element={<ProductDetailPage />}
           />
         </Routes>
       </Router>
