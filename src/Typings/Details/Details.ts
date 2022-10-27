@@ -4,4 +4,5 @@ export type DetailProducts = {
   price: number;
   condition: string;
   sold_quantity: number;
+  currency_id: string;
 };

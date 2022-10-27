@@ -9,4 +9,5 @@ export type Product = {
   prices: Prices;
   address: Address;
   shipping: Shipping;
+  currency_id: string;
 };

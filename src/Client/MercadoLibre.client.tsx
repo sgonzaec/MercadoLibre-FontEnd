@@ -1,4 +1,4 @@
-export default {
+const MercadoLibre = {
   getProductList: (query: string) => {
     return fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`, {
       method: "GET",
@@ -15,3 +15,5 @@ export default {
     }).then((e) => e.json());
   }
 };
+
+export default MercadoLibre;

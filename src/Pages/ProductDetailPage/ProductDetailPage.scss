@@ -12,20 +12,25 @@
     &-image {
       width: 50%;
       height: 50%;
+      max-width: 680px;
       img {
         width: 100%;
+        max-width: 680px;
         height: 100%;
       }
     }
     &-info {
       width: 30%;
       height: 50%;
+      &-condition {
+        font-size: 14px;
+      }
       &-title {
-        font-size: 1.5em;
+        font-size: 24px;
         font-weight: bold;
       }
       &-price {
-        font-size: 3em;
+        font-size: 46px;
         margin: 0;
       }
       &-button {

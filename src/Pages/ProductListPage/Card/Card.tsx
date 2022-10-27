@@ -1,6 +1,7 @@
 import { Product } from "../../../Typings/Products/Product";
 import FreeShipping from "../../../Assets/images/ic_shipping@2x.png";
 import { Link } from "react-router-dom";
+import Format from "../../../Utils/Format";
 
 const Card = (product: Product) => {
   return (
@@ -10,7 +11,7 @@ const Card = (product: Product) => {
       </Link>
       <div className="card__info">
         <div className="card__info__price">
-          <p>$ {product.prices.prices[0].amount}</p>
+          <p>{Format.Price(product.prices.prices[0].amount, product.currency_id)}</p>
           {product.shipping && <img src={FreeShipping} alt="free_shipping" />}
         </div>
         <Link to={`/items/${product.id}`}>

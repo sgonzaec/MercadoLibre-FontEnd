@@ -17,17 +17,24 @@
     &__location {
       margin-right: 2em;
       p {
-        font-size: 13px;
+        font-size: 12px;
       }
     }
     &__info {
       left: 14em;
       max-width: 50%;
       position: absolute;
+      &-title {
+        font-size: 18px;
+      }
       &__price {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        p{
+          font-size: 24px;
+          margin: 0;
+        }
         img {
           width: 25px;
           height: 25px;
