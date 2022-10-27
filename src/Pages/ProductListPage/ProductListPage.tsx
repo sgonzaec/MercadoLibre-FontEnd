@@ -24,9 +24,9 @@ const ProductListPage = () => {
     <>
       <Header />
       <div className="product-list-page">
-        {products?.results?.map((product: Product) => {
+        {products?.results?.map((product: Product, index) => {
           return (
-            <Card {...product}/>
+            <Card key={index} {...product}/>
           )
         })}
       </div>

@@ -4,6 +4,7 @@ import MercadoLibreClient from "../../Client/MercadoLibre.client";
 import Header from "../../Components/Shared/Header/Header";
 import { ProductDescription } from "../../Typings/Details/Description";
 import { DetailProducts } from "../../Typings/Details/Details";
+import Format from "../../Utils/Format";
 import "./ProductDetailPage.scss";
 
 const ProductDetailPage = () => {
@@ -40,7 +41,7 @@ const ProductDetailPage = () => {
               {detailsProduct?.title}
             </p>
             <p className="product-detail-page-detail-info-price">
-              $ {detailsProduct?.price}
+              {detailsProduct && Format.Price(detailsProduct?.price, detailsProduct?.currency_id)}
             </p>
             <button className="product-detail-page-detail-info-button">
               Comprar
