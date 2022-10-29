@@ -1,0 +1,12 @@
+:root {
+  --primary: #FFE600;
+  --secondary: #3483FA;
+  --tertiary: #EEEEEE;
+  --quaternary: #666666;
+}
+
+body {
+  margin: 0;
+  background-color: var(--tertiary);
+  font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+}

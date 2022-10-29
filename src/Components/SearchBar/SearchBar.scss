@@ -1,0 +1,32 @@
+.search-bar {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  &-input {
+    width: 90%;
+    padding: 0 1em;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: rgb(196, 196, 196);
+    }
+  }
+  &-button {
+    width: 3em;
+    display: block;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 100%;
+    cursor: pointer;
+    img {
+      width: 1.5em;
+    }
+  }
+}
