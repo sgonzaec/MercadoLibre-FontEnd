@@ -82,6 +82,7 @@
       font-size: 1em;
       color: var(--quaternary);
       width: 70%;
+      word-wrap: break-word;
       @media screen and (max-width: 800px) {
         width: 100%;
       }
