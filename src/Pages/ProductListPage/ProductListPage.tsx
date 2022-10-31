@@ -15,10 +15,8 @@ const ProductListPage = () => {
 
   useEffect(() => {
     if (searchName) {
-      MercadoLibreClient.getProductList(searchName).then((result) => {
-        setProducts(result);
-        setLoading(false);
-      });
+      MercadoLibreClient.getProductList(searchName, setProducts);
+      setLoading(false);
     }
   }, [searchName]);
 

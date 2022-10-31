@@ -16,12 +16,9 @@ const ProductDetailPage = () => {
 
   useEffect(() => {
     if (id) {
-      MercadoLibreClient.getProductDetail(id).then((result) => {
-        setDetailsProduct(result);
-      });
-      MercadoLibreClient.getProductDescription(id).then((result) => {
-        setDescription(result);
-      });
+      MercadoLibreClient.getProductDetail(id, setDetailsProduct)
+      
+      MercadoLibreClient.getProductDescription(id, setDescription)
       setLoading(false);
     }
   }, [id]);
