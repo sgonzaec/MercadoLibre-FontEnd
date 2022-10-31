@@ -26,9 +26,15 @@ const ProductListPage = () => {
         <Loading />
       ) : (
         <section className="product-list-page">
-          {products?.results?.map((product: Product, index) => {
-            return <Card key={index} {...product} />;
-          })}
+          {products.results.length === 0 ? (
+            <p className="product-list-page-error"> No se encontraron productos</p>
+          ) : (
+            <div className="prodcut-list">
+              {products?.results?.map((product: Product, index) => {
+                return <Card key={index} {...product} />;
+              })}
+            </div>
+          )}
         </section>
       )}
     </>
