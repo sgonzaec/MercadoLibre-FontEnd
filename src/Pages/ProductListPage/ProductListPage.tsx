@@ -27,11 +27,11 @@ const ProductListPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="product-list-page">
+        <section className="product-list-page">
           {products?.results?.map((product: Product, index) => {
             return <Card key={index} {...product} />;
           })}
-        </div>
+        </section>
       )}
     </>
   );

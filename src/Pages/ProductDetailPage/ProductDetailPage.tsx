@@ -31,7 +31,7 @@ const ProductDetailPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="product-detail-page">
+        <section className="product-detail-page">
           <div className="product-detail-page-detail">
             <div className="product-detail-page-detail-image">
               <img
@@ -67,7 +67,7 @@ const ProductDetailPage = () => {
               {Description?.plain_text}
             </p>
           </div>
-        </div>
+        </section>
       )}
     </>
   );

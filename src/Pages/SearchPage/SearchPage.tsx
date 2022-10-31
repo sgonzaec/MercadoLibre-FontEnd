@@ -3,9 +3,9 @@ import './SearchPage.scss'
 
 const SearchPage = () => {
   return (
-    <div className="SearchPage">
+    <section className="SearchPage">
       <img src={Logo} alt="Logo" />
-    </div>
+    </section>
   );
 };
 
