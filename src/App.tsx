@@ -8,12 +8,14 @@ import ProductDetailPage from "./Pages/ProductDetailPage/ProductDetailPage";
 
 //Context
 import BreadcrumDataContainer from "./Context/BreadcrumData.context";
+import Header from "./Components/Shared/Header/Header";
 
 function App() {
   return (
     <BreadcrumDataContainer>
       <div className="App">
         <Router>
+          <Header/>
           <Routes>
             <Route path="/" element={<SearchPage />} />
             <Route path={`/:searchName`} element={<ProductListPage />} />

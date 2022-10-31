@@ -1,7 +1,12 @@
-import Header from "../../Components/Shared/Header/Header";
+import Logo from "../../Assets/images/Logo_ML.png";
+import './SearchPage.scss'
 
 const SearchPage = () => {
-  return <Header />;
+  return (
+    <div className="SearchPage">
+      <img src={Logo} alt="Logo" />
+    </div>
+  );
 };
 
 export default SearchPage;
