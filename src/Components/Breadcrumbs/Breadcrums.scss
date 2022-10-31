@@ -1,0 +1,18 @@
+.breadcrums{
+    width: 75%;
+    margin: auto;
+    margin-top: 1em;
+    &-link{
+        color: var(--quaternary);
+        text-decoration: none;
+        text-transform: capitalize;
+        &:hover{
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    &-separator{
+        color: var(--quaternary);
+        margin: 0 0.5em;
+    }
+}

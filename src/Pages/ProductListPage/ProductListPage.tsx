@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MercadoLibreClient from "../../Client/MercadoLibre.client";
-import Header from "../../Components/Shared/Header/Header";
 import { Product } from "../../Typings/Products/Product";
 import { Products } from "../../Typings/Products/Products";
 import Loading from "../../Utils/Loading/Loading";
@@ -25,7 +24,6 @@ const ProductListPage = () => {
 
   return (
     <>
-      <Header />
       {loading ? (
         <Loading />
       ) : (
