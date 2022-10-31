@@ -1,6 +1,6 @@
 const Format = {
   Price: (price: number, currency_id: string) => {
-    return price.toLocaleString("es-AR", {
+    return price?.toLocaleString("es-AR", {
       style: "currency",
       currency: currency_id,
       minimumFractionDigits: 0,
