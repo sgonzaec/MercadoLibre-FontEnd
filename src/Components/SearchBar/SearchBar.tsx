@@ -22,7 +22,7 @@ const SearchBar = () => {
         className="search-bar-input"
         placeholder="Nunca dejes de buscar"
         onKeyUp={(e) => {
-          const target = e.target as HTMLTextAreaElement;
+          const target = e.target as HTMLInputElement;
           setSearchData(target.value)
           validKey(e);
         }}
