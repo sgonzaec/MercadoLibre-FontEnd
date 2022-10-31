@@ -12,18 +12,18 @@ import Header from "./Components/Shared/Header/Header";
 
 function App() {
   return (
-    <BreadcrumDataContainer>
-      <div className="App">
-        <Router>
-          <Header/>
+    <div className="App">
+      <Router>
+        <BreadcrumDataContainer>
+          <Header />
           <Routes>
             <Route path="/" element={<SearchPage />} />
             <Route path={`/:searchName`} element={<ProductListPage />} />
             <Route path={`items/:id`} element={<ProductDetailPage />} />
           </Routes>
-        </Router>
-      </div>
-    </BreadcrumDataContainer>
+        </BreadcrumDataContainer>
+      </Router>
+    </div>
   );
 }
 

@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import BreadcrumData from "../Typings/Breadcrums/breadcrums";
+import { useLocation } from "react-router-dom";
 
 export const BreadcrumDataContext = createContext({
   path: [],
@@ -8,7 +9,9 @@ export const BreadcrumDataContext = createContext({
 const BreadcrumDataContainer = ({ children }: BreadcrumData) => {
   const [path, setPath] = useState<any>([]);
 
-  const pathname = window.location.pathname;
+  const location = useLocation();
+
+  const pathname = location.pathname;
 
   useEffect(() => {
     if (pathname && pathname !== "/") {
@@ -21,6 +24,8 @@ const BreadcrumDataContainer = ({ children }: BreadcrumData) => {
       setPath([]);
     }
   }, [pathname]);
+
+  
 
   const route = {
     path,
