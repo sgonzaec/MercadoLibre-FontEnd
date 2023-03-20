@@ -10,7 +10,6 @@ const BreadcrumDataContainer = ({ children }: BreadcrumData) => {
   const [path, setPath] = useState<any>([]);
 
   const location = useLocation();
-
   const pathname = location.pathname;
 
   useEffect(() => {
